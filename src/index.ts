@@ -3,6 +3,10 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { registerListingsTools } from "./tools/listings.js";
 import { registerReservationsTools } from "./tools/reservations.js";
+import { registerCalendarTools } from "./tools/calendar.js";
+import { registerConversationsTools } from "./tools/conversations.js";
+import { registerFinancialsTools } from "./tools/financials.js";
+import { registerAccountTools } from "./tools/account.js";
 
 async function main(): Promise<void> {
   const server = new McpServer({
@@ -12,6 +16,10 @@ async function main(): Promise<void> {
 
   registerListingsTools(server);
   registerReservationsTools(server);
+  registerCalendarTools(server);
+  registerConversationsTools(server);
+  registerFinancialsTools(server);
+  registerAccountTools(server);
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
