@@ -1,18 +1,25 @@
 # @prosperkartik/hostaway-mcp
 
-> Operator-built Model Context Protocol (MCP) server for the Hostaway PMS.
+<p align="center">
+  <img src="./docs/hostaway-logo.png" alt="Hostaway" height="48" />
+</p>
 
-`@prosperkartik/hostaway-mcp` connects Claude (in Claude Code, Claude Desktop, or any MCP-compatible client) to your Hostaway account — listings, reservations, calendar availability, guest messaging, and financials. **Built and maintained by an actual short-term rental operator running properties on Hostaway**, not a generic API wrapper.
+> Model Context Protocol (MCP) server for the Hostaway PMS — connect Claude to your vacation rental ops.
+
+`@prosperkartik/hostaway-mcp` connects Claude (in Claude Code, Claude Desktop, or any MCP-compatible client) to your Hostaway account — listings, reservations, calendar availability, guest messaging, and financials. Authored by an engineer who has integrated Hostaway, Ciirus, and major OTA APIs (Airbnb, VRBO, Booking.com, Expedia, Marriott) in production for short-term rental operators since 2022.
 
 [![npm version](https://img.shields.io/npm/v/@prosperkartik/hostaway-mcp.svg?style=flat-square)](https://www.npmjs.com/package/@prosperkartik/hostaway-mcp)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](./LICENSE)
 
-## Why another Hostaway MCP server
+> _Hostaway is a trademark of Hostaway Inc. This project is community-built and not affiliated with or endorsed by Hostaway._
 
-Two reasons:
+## Why this server
 
-1. **More tools.** 10 tools covering listings, reservations, calendar, conversations, financials, and a health-check. Every tool the existing alternative ships, plus four it doesn't.
-2. **Operator UX.** Auth takes the credentials Hostaway gives you — Account ID + API Key — and mints the bearer token internally. No "go generate a token elsewhere first" step.
+Three reasons:
+
+1. **Tool coverage.** 10 read-only tools across listings, reservations, calendar, conversations, financials, and a health-check — broader surface than other community MCP servers in this space.
+2. **Cleaner auth UX.** Takes the two credentials Hostaway gives you on the API settings page — Account ID + API Key — and handles the OAuth token exchange internally. No "go generate a bearer token elsewhere first" step.
+3. **Built by someone who works the API.** The author has 3+ years of production Hostaway / Ciirus integration work behind the design decisions. Tools map to real operator workflows, not just REST endpoints.
 
 ## Tools (v0.1)
 
@@ -161,6 +168,6 @@ MIT — see [LICENSE](./LICENSE).
 
 ## Author
 
-Built by **[Kartik Vats](https://kodeit.io)** ([@prosperkartik](https://github.com/prosperkartik)) — STR operator, AI engineer at [Kodeit](https://kodeit.io).
+Built by **[Kartik Vats](https://kodeit.io)** ([@prosperkartik](https://github.com/prosperkartik)) — AI engineer at [Kodeit](https://kodeit.io). Three years of production work on PMS / OTA integrations and LLM tooling.
 
-If you're an STR or vacation rental operator and want help wiring AI into your ops, get in touch via [kodeit.io](https://kodeit.io).
+If you're a vacation rental operator or hospitality tech team and want help wiring AI into your ops, get in touch via [kodeit.io](https://kodeit.io).
