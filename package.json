@@ -1,0 +1,58 @@
+{
+  "name": "hostaway-mcp",
+  "version": "0.1.0",
+  "description": "Open-source Model Context Protocol (MCP) server for the Hostaway PMS — connect Claude to your vacation rental ops.",
+  "type": "module",
+  "bin": {
+    "hostaway-mcp": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "anthropic",
+    "hostaway",
+    "vacation-rental",
+    "pms",
+    "short-term-rental",
+    "airbnb",
+    "vrbo"
+  ],
+  "author": "Kartik Vats <prosperkartik@gmail.com> (https://kodeit.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosperkartik/hostaway-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prosperkartik/hostaway-mcp/issues"
+  },
+  "homepage": "https://github.com/prosperkartik/hostaway-mcp#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}
