@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "hostaway": {
+      "command": "npx",
+      "args": ["-y", "hostaway-mcp"],
+      "env": {
+        "HOSTAWAY_ACCOUNT_ID": "your-account-id",
+        "HOSTAWAY_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
