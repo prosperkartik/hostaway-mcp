@@ -13,7 +13,7 @@ interface Listing {
   bedroomsNumber?: number | null;
   bathroomsNumber?: number | null;
   personCapacity?: number | null;
-  status?: string | null;
+  specialStatus?: string | null;
   currencyCode?: string | null;
 }
 
@@ -30,8 +30,9 @@ function formatListings(listings: Listing[]): string {
   for (const l of listings) {
     const name = l.internalListingName || l.name || l.externalListingName || `Listing ${l.id}`;
     const location = [l.city, l.country].filter(Boolean).join(", ") || "—";
+    const status = l.specialStatus ?? "active";
     lines.push(
-      `| ${l.id} | ${name} | ${location} | ${l.bedroomsNumber ?? "—"} | ${l.bathroomsNumber ?? "—"} | ${l.personCapacity ?? "—"} | ${l.status ?? "—"} |`
+      `| ${l.id} | ${name} | ${location} | ${l.bedroomsNumber ?? "—"} | ${l.bathroomsNumber ?? "—"} | ${l.personCapacity ?? "—"} | ${status} |`
     );
   }
   return lines.join("\n");

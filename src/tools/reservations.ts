@@ -12,7 +12,7 @@ interface Reservation {
   guestFirstName?: string | null;
   guestLastName?: string | null;
   guestEmail?: string | null;
-  guestPhone?: string | null;
+  phone?: string | null;
   numberOfGuests?: number | null;
   adults?: number | null;
   children?: number | null;
@@ -23,10 +23,12 @@ interface Reservation {
   status?: string | null;
   totalPrice?: number | null;
   currency?: string | null;
-  hostawayResortFee?: number | null;
   cleaningFee?: number | null;
-  channelTotalPrice?: number | null;
+  taxAmount?: number | null;
+  channelCommissionAmount?: number | null;
+  hostawayCommissionAmount?: number | null;
   isInitial?: boolean | null;
+  isPaid?: number | boolean | null;
   reservationDate?: string | null;
   confirmationCode?: string | null;
   source?: string | null;
@@ -73,7 +75,7 @@ function formatReservationDetail(r: Reservation): string {
     `## Guest`,
     `- Name: ${guest}`,
     `- Email: ${r.guestEmail ?? "—"}`,
-    `- Phone: ${r.guestPhone ?? "—"}`,
+    `- Phone: ${r.phone ?? "—"}`,
     `- Party: ${r.numberOfGuests ?? "—"} total (adults ${r.adults ?? "—"}, children ${r.children ?? "—"}, infants ${r.infants ?? "—"})`,
     "",
     `## Dates`,
@@ -83,9 +85,10 @@ function formatReservationDetail(r: Reservation): string {
     "",
     `## Pricing`,
     `- Total: ${fmtMoney(r.totalPrice, r.currency)}`,
-    `- Channel total: ${fmtMoney(r.channelTotalPrice, r.currency)}`,
     `- Cleaning fee: ${fmtMoney(r.cleaningFee, r.currency)}`,
-    `- Resort fee: ${fmtMoney(r.hostawayResortFee, r.currency)}`,
+    `- Tax: ${fmtMoney(r.taxAmount, r.currency)}`,
+    `- Channel commission: ${fmtMoney(r.channelCommissionAmount, r.currency)}`,
+    `- Paid: ${r.isPaid ? "yes" : "no"}`,
   ];
   return sections.join("\n");
 }
