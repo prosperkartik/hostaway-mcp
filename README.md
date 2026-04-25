@@ -170,4 +170,4 @@ MIT — see [LICENSE](./LICENSE).
 
 Built by **[Kartik Vats](https://kodeit.io)** ([@prosperkartik](https://github.com/prosperkartik)) — AI engineer at [Kodeit](https://kodeit.io). Three years of production work on PMS / OTA integrations and LLM tooling.
 
-If you're a vacation rental operator or hospitality tech team and want help wiring AI into your ops, get in touch via [kodeit.io](https://kodeit.io).
+If you're a vacation rental operator or hospitality tech team and want help wiring AI into your ops, get in touch via [kodeit.io](https://kodeit.io) or email **prosperkartik@gmail.com**.
