@@ -68,6 +68,11 @@ web_modules/
 # TypeScript build output
 build/
 
+# npm auth tokens — must NEVER be committed
+.npmrc
+.npmrc.local
+secrets/
+
 # dotenv environment variable files
 .env
 .env.*
