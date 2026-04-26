@@ -1,0 +1,12 @@
+node_modules
+build
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+.npmrc
+.npmrc.local
+secrets
+*.log
+.DS_Store
