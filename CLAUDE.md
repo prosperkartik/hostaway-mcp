@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 # `@prosperkartik/hostaway-mcp` — Model Context Protocol server for the Hostaway PMS
 
-Open-source MCP server connecting Claude (and any MCP-compatible client) to the Hostaway property-management system. **v0.1.0 shipped Apr 25, 2026** — 10 read-only tools, on npm, MIT licensed.
+Open-source MCP server connecting Claude (and any MCP-compatible client) to the Hostaway property-management system. **v0.1.0 shipped Apr 25, 2026; v0.1.1 (infra-only — Dockerfile + glama.json) Apr 26, 2026** — 10 read-only tools, on npm, MIT licensed.
 
 - npm: <https://www.npmjs.com/package/@prosperkartik/hostaway-mcp>
 - Repo: <https://github.com/prosperkartik/hostaway-mcp>

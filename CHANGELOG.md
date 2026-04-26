@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.1 — 2026-04-26
+
+Infrastructure release. No changes to the MCP server's behavior or tool surface — the published npm artifact is functionally identical to v0.1.0. Cut so the GitHub release tarball includes the container build files and post-launch documentation, which Glama's directory listing checks (server coherence, tool definition quality) need to evaluate the server.
+
+### Added
+
+- `Dockerfile` — multi-stage `node:20-alpine` build, runs the server over stdio as a non-root user
+- `.dockerignore` — keeps `node_modules`, `build/`, `.env*`, `.npmrc`, and `secrets/` out of the build context
+- `glama.json` — minimal Glama directory metadata (declares `prosperkartik` as maintainer)
+- `SECURITY.md` — vulnerability reporting policy (added between v0.1.0 and v0.1.1)
+- `CLAUDE.md` — repo-internal guide for AI coding assistants (added between v0.1.0 and v0.1.1)
+
 ## v0.1.0 — 2026-04-25
 
 Initial public release of `@prosperkartik/hostaway-mcp`. Built and end-to-end tested against the live Hostaway API.

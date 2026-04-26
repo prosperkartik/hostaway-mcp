@@ -11,7 +11,7 @@ import { registerAccountTools } from "./tools/account.js";
 async function main(): Promise<void> {
   const server = new McpServer({
     name: "hostaway-mcp",
-    version: "0.1.0",
+    version: "0.1.1",
   });
 
   registerListingsTools(server);
@@ -24,7 +24,7 @@ async function main(): Promise<void> {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   // stdout is reserved for MCP JSON-RPC; logs go to stderr.
-  console.error("hostaway-mcp v0.1.0 running on stdio");
+  console.error("hostaway-mcp v0.1.1 running on stdio");
 }
 
 main().catch((err) => {

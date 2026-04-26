@@ -1,6 +1,6 @@
 {
   "name": "@prosperkartik/hostaway-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Model Context Protocol (MCP) server for the Hostaway PMS — connect Claude to your vacation rental ops. 10 read-only tools across listings, reservations, calendar, conversations, and financials.",
   "type": "module",
   "bin": {
